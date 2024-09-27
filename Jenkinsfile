@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', 'url: https://git.utec.edu.uy/joaquin.hernandez/trabajo-individual-foro-rick-y-morty.git'
+                git branch: 'main', url: 'https://git.utec.edu.uy/joaquin.hernandez/trabajo-individual-foro-rick-y-morty.git'
             }
         }
         stage('Build Docker Image') {
