@@ -1,24 +1,24 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Repository') {
+        stage('Step 1: Clonar repositorio') {
             steps {
                 git branch: 'master', url: 'https://git.utec.edu.uy/joaquin.hernandez/trabajo-individual-foro-rick-y-morty.git'
             }
         }
-        stage('Build Docker Image') {
+        stage('Step 2: Ejecutar comandos basicos') {
             steps {
                 script {
-                    docker.build('rick-morty-api-docker').inside {
-                        echo 'Docker container is up and running!'
-                    }
+                    sh 'echo "Running basic commands..."'
+                    sh 'ls -la'
                 }
             }
         }
     }
     post {
         always {
-            echo 'Pipeline completed.'
+            echo 'Pipeline completado exitosamente.'
+            cleanWs()
         }
     }
 }
