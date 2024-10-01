@@ -6,7 +6,7 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/joaquinhernandez1/proyecto-ejemplo-devops-sem3.git'
             }
         }
-        stage('Step 2: Ejecutar comandos basicos') {
+        stage('Step 2: Ejecutar comandos basicos, probando un push') {
             steps {
                 script {
                     sh 'echo "Running basic commands..."'
