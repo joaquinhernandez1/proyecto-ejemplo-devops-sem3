@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Step 1: Clonar repositorio') {
             steps {
-                git branch: 'master', url: 'https://git.utec.edu.uy/joaquin.hernandez/trabajo-individual-foro-rick-y-morty.git'
+                git branch: 'master', url: 'https://github.com/joaquinhernandez1/proyecto-ejemplo-devops-sem3.git'
             }
         }
         stage('Step 2: Ejecutar comandos basicos') {
